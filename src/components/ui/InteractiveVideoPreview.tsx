@@ -9,7 +9,7 @@ const getImageSrc = (index: number) => `/images/hero-${index}.png`;
 
 const InteractiveVideoPreview = () => {
   const [currentIndex, setCurrentIndex] = useState(1);
-  const [isHovering, setIsHovering] = useState(false);
+  const [, setIsHovering] = useState(false);
   // Correctly type the useRef hook to hold a Timeout or null
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 

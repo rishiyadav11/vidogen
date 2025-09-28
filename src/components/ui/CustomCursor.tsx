@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 
 const CustomCursor = () => {
   const cursorRef = useRef(null);
-  const [isHovering, setIsHovering] = useState(false);
+  const [isHovering, ] = useState(false);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {

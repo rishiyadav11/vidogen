@@ -21,16 +21,16 @@ export const metadata: Metadata = {
     "YouTube Video Auto-Post",
     "Instagram Video Auto-Post"
   ],
-  authors: [{ name: "VidoGen", url: "https://vidogen.me" }],
+  authors: [{ name: "VidoGen", url: "https://vidogen.vercel.app" }],
   openGraph: {
     title: "VidoGen – AI Video Generator | Create Stunning Videos Instantly",
     description:
       "Transform prompts and images into stunning AI videos effortlessly. Auto-post to YouTube & Instagram with VidoGen.",
-    url: "https://vidogen.me",
+    url: "https://vidogen.vercel.app",
     siteName: "VidoGen",
     images: [
       {
-        url: "https://vidogen.me/og-image.webp",
+        url: "https://vidogen.vercel.app/preview.png",
         width: 1200,
         height: 630,
         alt: "VidoGen – AI Video Generator",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     title: "VidoGen – AI Video Generator",
     description:
       "Effortlessly create AI-generated videos from prompts and images. Auto-post directly to YouTube and Instagram.",
-    images: ["https://vidogen.me/og-image.webp"],
+    images: ["https://vidogen.vercel.app/preview.png"],
   },
   icons: [
     { rel: "icon", url: "/logo.webp" },

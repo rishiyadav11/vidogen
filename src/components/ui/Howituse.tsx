@@ -26,7 +26,7 @@ export function FeatureSteps({
   className,
   title = "How to get Started",
   autoPlayInterval = 3000,
-  imageHeight = "h-[400px]",
+  
 }: FeatureStepsProps) {
   const [currentFeature, setCurrentFeature] = useState(0)
   const [progress, setProgress] = useState(0)
@@ -80,7 +80,7 @@ export function FeatureSteps({
 
                 <div className="flex-1">
                   <h3 className="text-xl md:text-2xl font-semibold text-white">
-                    {feature.title || feature.step}
+                    {feature.title ?? feature.step}
                   </h3>
                   <p className="text-sm md:text-lg text-white">
                     {feature.content}
