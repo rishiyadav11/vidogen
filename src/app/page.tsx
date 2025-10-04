@@ -3,7 +3,7 @@ import Collaboration from "@/components/Collaboration";
 import Services from "@/components/Services";
 
 import Cta from "@/components/Cta";
-import { HowItWorks } from "../components/HowItWorks";
+import { HowItWorks } from "../components/howitworks";
 import Hero1 from "@/components/Hero1";
 import { Skiper49 } from "../components/skiper49";
 import FAQPage from "../components/Faq";
