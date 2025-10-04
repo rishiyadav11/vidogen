@@ -3,10 +3,9 @@ import Collaboration from "@/components/Collaboration";
 import Services from "@/components/Services";
 
 import Cta from "@/components/Cta";
-import { HowItWorks } from "@/components/HowItWorks";
+import { HowItWorks } from "../components/HowItWorks";
 import Hero1 from "@/components/Hero1";
 import { Skiper49 } from "../components/skiper49";
-import Story from "../components/Story";
 import FAQPage from "../components/Faq";
 
 export default function Home() {
