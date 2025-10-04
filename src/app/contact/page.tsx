@@ -5,7 +5,7 @@ import Button from '@/components/Button'
 
 const ContactPage = () => {
   return (
-    <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
+    <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden text-white">
       {/* Hero */}
       <Section className="py-28 bg-gradient-to-br from-n-8 to-n-7 text-center text-white relative overflow-hidden">
         <div className="container space-y-6 max-w-3xl mx-auto">
