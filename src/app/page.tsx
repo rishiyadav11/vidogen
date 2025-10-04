@@ -1,23 +1,30 @@
-import Hero from "../components/Hero";
-import Features from "../components/Features";
-import Story from "../components/Story";
-import Contact from "../components/Contact";
-import  FAQPage from "components/Faq";
-import { HowItWorks } from "components/Howitworks";
-import  { Skiper49 } from "components/ui/skiper49";
+import Hero from "@/components/Hero";
+import Collaboration from "@/components/Collaboration";
+import Services from "@/components/Services";
 
-function App() {
+import Cta from "@/components/Cta";
+import { HowItWorks } from "@/components/HowItWorks";
+import Hero1 from "@/components/Hero1";
+import { Skiper49 } from "../components/skiper49";
+import Story from "../components/Story";
+import FAQPage from "../components/Faq";
+
+export default function Home() {
   return (
-    <main className="relative min-h-screen w-screen bg-black ">
-      <Hero />
-      <Features />
-      <HowItWorks />
-      <Story />
-      <Skiper49/>
-      <FAQPage/>
-      <Contact />
-    </main>
+    <>
+      <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
+        <Hero />
+        <Hero1 />
+        <Services />
+        <HowItWorks />
+        <Collaboration />
+
+        <Cta />
+        {/* <Story /> */}
+        <Skiper49 />
+        <FAQPage />
+        {/* <ContactPage/> */}
+      </div>
+    </>
   );
 }
-
-export default App;

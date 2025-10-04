@@ -1,48 +1,34 @@
-// src/components/Button.tsx
-import clsx from "clsx";
-import type { ReactNode } from "react";
+import ButtonSvg from "../assets/svg/ButtonSvg";
 
-interface ButtonProps {
-  id: string;
-  title: string;
-  rightIcon?: ReactNode;
-  leftIcon?: ReactNode;
-  containerClass?: string;
-  // Add this line 👇
-  onClick?: () => void; 
-}
-
-const Button: React.FC<ButtonProps> = ({
-  id,
-  title,
-  rightIcon,
-  leftIcon,
-  containerClass,
-  // Add this line 👇
-  onClick,
+const Button = ({ className, href, onClick, children, px, white, type } : {
+  className?: string;
+  href?: string;
+  onClick?: () => void;
+  children: React.ReactNode;
+  px?: string;
+  white?: any;
+  type?: "button" | "submit" | "reset";
 }) => {
-  return (
-    // Add this line 👇
-    <button
-      id={id}
-      onClick={onClick}
-      className={clsx(
-        "group relative z-10 w-fit cursor-pointer overflow-hidden rounded-full bg-violet-50 px-7 flex gap-1 py-4 hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-500 transition-all duration-300 text-black",
-        containerClass,
-      )}
-    >
-      {leftIcon}
-      <span className="relative inline-flex overflow-hidden font-general text-xs uppercase">
-        <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:translate-y-[-160%] group-hover:skew-y-12">
-          {title}
-        </div>
-        <div className="absolute translate-y-[164%] skew-y-12 transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">
-          {title}
-        </div>
-      </span>
-      {rightIcon}
+  const classes = `button relative inline-flex items-center justify-center h-11 transition-colors hover:text-color-1 ${
+    px || "px-7"
+  } ${white ? "text-n-8" : "text-n-1"} ${className || ""}`;
+  const spanClasses = "relative z-10";
+
+  const renderButton = () => (
+    <button className={classes} onClick={onClick}>
+      <span className={spanClasses}>{children}</span>
+      {ButtonSvg(white)}
     </button>
   );
+
+  const renderLink = () => (
+    <a href={href} className={classes}>
+      <span className={spanClasses}>{children}</span>
+      {ButtonSvg(white)}
+    </a>
+  );
+
+  return href ? renderLink() : renderButton();
 };
 
 export default Button;

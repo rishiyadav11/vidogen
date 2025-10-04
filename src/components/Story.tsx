@@ -117,13 +117,13 @@ const FloatingImage = () => {
               and more — no downloads or hassle required.
             </p>
 
-            <Button
-              id="get-started-btn"
-              title="Get Started Now"
-              containerClass="mt-5"
-              rightIcon={undefined}
-              leftIcon={undefined}
-            />
+                        <Button
+              className="w-full mb-6"
+              href="/"
+              
+            >
+              Get Started - It's Free
+            </Button>
           </div>
         </div>
       </div>

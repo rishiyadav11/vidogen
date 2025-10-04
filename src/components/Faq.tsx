@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import AnimatedTitle from "./AnimatedTitle";
+import Section from "./Section";
 
 interface FaqItemProps {
   question: string;
@@ -87,10 +88,11 @@ const faqs = [
 
 const FAQPage = () => {
   return (
-    <div className="min-h-screen bg-black py-20 px-5 flex item-center flex-col md:px-20 text-white">
+  <Section crosses>
+      <div className="min-h-screen bg-black py-20 px-5 flex item-center flex-col md:px-20 text-white">
                 <AnimatedTitle
             title="Frequently Asked Questions"
-            containerClass="mb-10 mt-5 pointer-events-none mix-blend-difference relative z-10"
+            containerClass="mb-10 mt-5 text-center text-xl sm:text-3xl md:text-5xl pointer-events-none mix-blend-difference relative z-10"
           />
 
       <div className="max-w-4xl mx-auto divide-y divide-gray-700">
@@ -99,6 +101,7 @@ const FAQPage = () => {
         ))}
       </div>
     </div>
+  </Section>
   );
 };
 

@@ -1,75 +1,72 @@
-# VidoGen App
+# 🧠 Interfere – AI-Powered Incident Response & Auto-Healing
 
-Welcome to **VidoGen**, your AI-powered video generation platform! This project is built with the [T3 Stack](https://create.t3.gg/) and provides a modern, full-stack framework to create, schedule, and publish AI-generated videos seamlessly across multiple channels.
+Welcome to the official repository of **Interfere**, an AI-driven platform that detects, triages, and auto-resolves incidents across your engineering stack — so your team can focus on building, not firefighting. Proudly **backed by Y Combinator**.
 
----
-
-## 🚀 About VidoGen
-
-VidoGen allows you to:
-
-1. **Generate videos from prompts** – Simply provide a text prompt, and let AI create stunning videos.
-2. **Select platforms & channels** – Choose where you want your content to be published: YouTube, Instagram, TikTok, and more.
-3. **Auto-schedule posts** – VidoGen can automatically post your videos at the best time with optimized captions.
-4. **Leverage AI avatars** – Use pre-trained AI avatars to create engaging, personalized video content.
-
-Whether you are a content creator, marketer, or business, VidoGen simplifies video production like never before.
+![Interfere Banner](public/preview.png) <!-- Replace with your OG image -->
 
 ---
 
-## 🛠 Technology Stack
+## 🌐 Live Demo
 
-VidoGen is powered by the **T3 Stack**, which includes:
-
-- **Next.js** – React framework for server-side rendering and static site generation.
-- **NextAuth.js** – Authentication made simple.
-- **Prisma & Drizzle ORM** – Efficient database management.
-- **Tailwind CSS** – Modern, responsive UI design.
-- **tRPC** – Type-safe API communication.
+👉 [View Live Site](https://interfere.vercel.app/) <!-- Replace with your deployed link -->
 
 ---
 
+## ⚙️ What Is Interfere?
 
-./preview.png
+**Interfere** is built to reduce downtime and eliminate noisy alerts. It intelligently observes code, logs, and incidents to proactively catch issues, suggest fixes, and even roll back automatically when needed.
 
-🌟 Features
-Prompt-to-Video AI – Generate videos automatically from text prompts.
+### Interfere Helps You:
+- ⚡ Auto-detect bugs, regressions, and outages across tools
+- 🧠 Analyze logs, PRs, and ticket data to surface root causes
+- 🔁 Suggest rollbacks or hotfixes powered by AI
+- 🔗 Integrate deeply with GitHub, Slack, Linear, and Sentry
+- 🚨 Respond to incidents instantly without manual digging
 
-Multiple Channel Publishing – Schedule posts for YouTube, Instagram, TikTok, and more.
+---
 
-Caption Optimization – AI-generated captions for maximum engagement.
+## ✨ Features of This Redesign
 
-AI Avatars – Use avatars for personalized video content.
+- 🤖 AI-first UX with real-time context and recovery flow
+- 🪄 Autopilot mode for triage + rollback decisions
+- 🎥 Embedded system replay (Cloudinary or Loom)
+- 📊 Timeline-based incident dashboard with sticky scroll
+- 📱 Mobile-responsive, dark mode–friendly UI
+- 🔍 Optimized for SEO and shareable social previews
 
-Responsive UI – Clean and modern design built with Tailwind CSS.
+---
 
-📖 Learn More
-Check out the T3 Stack documentation to understand the core technologies used:
+## 🛠️ Tech Stack
 
-Next.js
+- **Next.js 14** – App Router, Metadata API, SSR
+- **Tailwind CSS** – Clean, responsive styling
+- **TypeScript** – Robust typings for safety
+- **Framer Motion** – Smooth transitions and animations
+- **Cloudinary** – Screenshot and video delivery
+- **Vercel** – CI/CD, edge functions, global deploys
 
-NextAuth.js
+---
 
-Prisma
+## 📂 Project Structure
 
-Drizzle ORM
+| Path                  | Description                                           |
+|----------------------|-------------------------------------------------------|
+| `/`                   | Main landing page (hero, how-it-works, CTA)          |
+| `components/`         | Reusable UI components (cards, banners, features)    |
+| `constants/`          | Static configs (integrations, testimonials, icons)   |
+| `design/`             | UI effects (sticky scroll, motion, background beams) |
+| `assets/`             | Media files like logos, screenshots, video assets    |
 
-Tailwind CSS
+---
+## 📸 Preview
 
-tRPC
+| Desktop View                              | Mobile View                               |
+| ---------------------------------------- | ----------------------------------------- |
+| ![Desktop](public/preview.png)   | ![Mobile](public/previewm.png)      |
 
-🚀 Deployment
-VidoGen can be deployed on multiple platforms. Follow the deployment guides:
+---
+## 🧪 Running Locally
 
-Vercel
-
-Netlify
-
-Docker
-
-💡 Tip: Customize your AI avatars and video templates for maximum engagement!
-
-
-
-
-
+```bash
+npm install
+npm run dev

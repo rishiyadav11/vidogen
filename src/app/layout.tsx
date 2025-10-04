@@ -1,39 +1,51 @@
-import "styles/globals.css";
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import ButtonGradient from "@/assets/svg/ButtonGradient";
 
-import { type Metadata } from "next";
-import { Geist } from "next/font/google";
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
 
-import { TRPCReactProvider } from "trpc/react";
-import Footer from "components/Footer";
-import NavBar from "components/Navbar";
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
-  title: "VidoGen – AI Video Generator | Create Stunning Videos Instantly",
+  title: "VidoGen – AI-Powered Video Creation & Auto-Posting",
   description:
-    "Effortlessly transform your prompts and images into stunning AI-generated videos. Auto-post directly to YouTube and Instagram with VidoGen.",
+    "VidoGen transforms ideas into stunning AI-generated videos instantly. Auto-generate, caption, and post to YouTube & Instagram effortlessly.",
   keywords: [
-    "AI Video Generator",
-    "Create Videos Online",
-    "AI Content Creator",
-    "Social Media Videos",
-    "VidoGen App",
-    "Automatic Video Maker",
-    "YouTube Video Auto-Post",
-    "Instagram Video Auto-Post"
+    "VidoGen",
+    "AI video",
+    "video generator",
+    "auto-post",
+    "YouTube video automation",
+    "Instagram reels",
+    "AI video captions",
+    "AI avatar",
+    "social media videos",
+    "video scheduling",
   ],
-  authors: [{ name: "VidoGen", url: "https://vidogen.vercel.app" }],
+  icons: {
+    icon: "/logo.webp",
+  },
   openGraph: {
-    title: "VidoGen – AI Video Generator | Create Stunning Videos Instantly",
+    title: "VidoGen – AI Video Generator & Auto-Poster",
     description:
-      "Transform prompts and images into stunning AI videos effortlessly. Auto-post to YouTube & Instagram with VidoGen.",
-    url: "https://vidogen.vercel.app",
+      "VidoGen lets creators instantly generate AI videos from prompts or images and auto-post them to YouTube & Instagram.",
+    url: "https://vidogen.vercel.app/",
     siteName: "VidoGen",
     images: [
       {
-        url: "https://vidogen.vercel.app/preview.png",
+        url: "/preview.png",
         width: 1200,
         height: 630,
-        alt: "VidoGen – AI Video Generator",
+        alt: "VidoGen – AI Video Creation & Auto-Posting",
       },
     ],
     locale: "en_US",
@@ -41,35 +53,32 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@vidogen",
-    title: "VidoGen – AI Video Generator",
+    title: "VidoGen – AI Video Creation & Auto-Posting",
     description:
-      "Effortlessly create AI-generated videos from prompts and images. Auto-post directly to YouTube and Instagram.",
-    images: ["https://vidogen.vercel.app/preview.png"],
+      "Create AI-powered videos from prompts or images and auto-post to YouTube & Instagram with VidoGen.",
+    images: ["/preview.png"],
+    creator: "@vidogen",
   },
-  icons: [
-    { rel: "icon", url: "/logo.webp" },
-  ],
+  metadataBase: new URL("https://vidogen.vercel.app/"),
+  category: "video-creation",
 };
-
-
-const geist = Geist({
-  subsets: ["latin"],
-  variable: "--font-geist-sans",
-});
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en" className={`${geist.variable}`}>
+    <html lang="en">
       <head>
-       
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
-      <body>
-        <NavBar />
-        <TRPCReactProvider>{children}</TRPCReactProvider>
+      <body className={`${geistSans.variable} ${geistMono.variable} bg-black`}>
+        <Header />
+        {children}
         <Footer />
+        <ButtonGradient />
       </body>
     </html>
   );
